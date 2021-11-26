@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    min-height: 950vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.showcase{
+    background-image: url('banner1.jpg');
+    padding-top: 10px;
+}
