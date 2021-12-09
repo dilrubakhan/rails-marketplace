@@ -52,7 +52,9 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :large do
     process resize_to_fit: [450, 450]
-  end#   "something.jpg" if original_filename
+  end
+  
+  #   "something.jpg" if original_filename
   # end
 
 
