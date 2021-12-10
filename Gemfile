@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-gem 'sqlite3', '~> 1.4'
+
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
@@ -17,8 +17,14 @@ gem 'carrierwave', '~> 2.0'
 gem "fog-aws"
 gem "mini_magick"
 
+group :production do
+
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
